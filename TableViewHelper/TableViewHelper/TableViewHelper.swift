@@ -159,6 +159,10 @@ public class TableViewHelper {
         return matchingCells
     }
     
+    public func cellWith(name: String) -> UITableViewCell {
+        return cells.first(where: { $0.name == name } )?.tableViewCell ?? UITableViewCell()
+    }
+    
     /// returns true if ALL cells with that name are visible
     public func cellIsVisible(_ name:String) -> Bool {
         var visible = true
